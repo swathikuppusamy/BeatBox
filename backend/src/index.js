@@ -10,6 +10,9 @@ import statRoutes from './routes/stat.route.js'
 import { connectdb } from './lib/db.js'
 import fileUpload from "express-fileupload"
 import path from 'path'
+import cors from 'cors'
+import { createServer } from 'http'
+import { initializeSocket } from './lib/socket.js'
 const app = express();
 dotenv.config();
 
@@ -17,14 +20,26 @@ const __dirname=path.resolve()
 
 const PORT = process.env.PORT
 
-app.use(clerkMiddleware());
+
+const httpServer = createServer(app);
+initializeSocket(httpServer)
+
+
+app.use(cors(
+  {
+    origin:"http://localhost:3000",
+    credentials : true,
+  }
+))
 app.use(express.json());
+app.use(clerkMiddleware());
+
 app.use(fileUpload({
   useTempFiles:true,
-  tempFileDir:path.join(__dirname,"temp"),
+  tempFileDir:path.join(__dirname,"tmp"),
   createParentPath:true,
   limits:{
-    fileSize: 10*1024*1024,
+    fileSize: 10 * 1024 * 1024,
   }
 }))
 
@@ -41,7 +56,7 @@ app.use((error,req,res,next)=>{
 })
 
 
-app.listen(PORT,()=>{
+httpServer.listen(PORT,()=>{
   console.log(`Server is running on port ${PORT}`)
   connectdb();
 })

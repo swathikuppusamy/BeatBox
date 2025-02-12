@@ -21,7 +21,7 @@ try {
                 title:1,
                 artist:1,
                 imageUrl:1,
-                audiourl:1.
+                audioUrl:1.
             },
         }
     ])
@@ -43,7 +43,7 @@ export const getMadeForYouSongs=async(req,res,next)=>{
                     title:1,
                     artist:1,
                     imageUrl:1,
-                    audiourl:1.
+                    audioUrl:1.
                 },
             }
         ])
@@ -66,7 +66,7 @@ export const getTrendingsSongs=async(req,res,next)=>{
                     title:1,
                     artist:1,
                     imageUrl:1,
-                    audiourl:1.
+                    audioUrl:1.
                 },
             }
         ])
