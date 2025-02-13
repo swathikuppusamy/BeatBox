@@ -32,7 +32,7 @@ initializeSocket(httpServer)
 
 app.use(cors(
   {
-    origin:"https://beatbox-yk67.onrender.com",
+    origin:"https://localhost/3000",
     credentials : true,
   }
 ))

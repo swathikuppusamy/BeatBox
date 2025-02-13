@@ -22,7 +22,7 @@ interface ChatStore {
 	setSelectedUser: (user: User | null) => void;
 }
 
-const baseURL ="https://beatbox-yk67.onrender.com/";
+const baseURL ="https://beatbox-backend-ae6x.onrender.com/";
 
 const socket = io(baseURL, {
 	autoConnect: false, // only connect if user is authenticated
