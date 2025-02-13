@@ -1,22 +1,26 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import {clerkMiddleware} from '@clerk/express'
+import fileUpload from "express-fileupload"
+import path from 'path'
+import cors from 'cors'
+import { createServer } from 'http'
+import { initializeSocket } from './lib/socket.js'
+
+import { connectdb } from './lib/db.js'
 import userRoutes from './routes/user.route.js'
 import adminRoutes from './routes/admin.route.js'
 import authRoutes from './routes/auth.route.js'
 import songRoutes from './routes/song.route.js'
 import albumRoutes from './routes/album.route.js'
 import statRoutes from './routes/stat.route.js'
-import { connectdb } from './lib/db.js'
-import fileUpload from "express-fileupload"
-import path from 'path'
-import cors from 'cors'
-import { createServer } from 'http'
-import { initializeSocket } from './lib/socket.js'
-const app = express();
 dotenv.config();
 
 const __dirname=path.resolve()
+const app = express();
+
+
+
 
 const PORT = process.env.PORT
 
