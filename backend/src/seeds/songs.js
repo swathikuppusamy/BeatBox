@@ -131,6 +131,34 @@ const songs = [
 		audioUrl: "/songs/18.mp3",
 		duration: 29, // 0:29
 	},
+	{
+		title: "Die with a Smile",
+		artist: "Lady Gaga and Bruno Mars",
+		imageUrl: "/cover-images/19.jpg",
+		audioUrl: "/songs/19.mp3",
+		duration: 4.11, 
+	},
+	{
+		title: "Cheap Thrills",
+		artist: "Sia",
+		imageUrl: "/cover-images/20.jpg",
+		audioUrl: "/songs/20.mp3",
+		duration: 3.31, 
+	},
+	{
+		title: "Calm Down",
+		artist: "Rema and Salena Gomez",
+		imageUrl: "/cover-images/21.jpg",
+		audioUrl: "/songs/21.mp3",
+		duration: 3.59, 
+	},
+	{
+		title: "Shape of You",
+		artist: "Ed shareen",
+		imageUrl: "/cover-images/22.jpg",
+		audioUrl: "/songs/22.mp3",
+		duration: 3.54, 
+	},
 ];
 
 const seedSongs = async () => {

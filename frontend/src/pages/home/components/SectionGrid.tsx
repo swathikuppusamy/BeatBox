@@ -46,3 +46,4 @@ const SectionGrid = ({ songs, title, isLoading }: SectionGridProps) => {
 	);
 };
 export default SectionGrid;
+

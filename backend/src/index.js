@@ -39,13 +39,13 @@ app.use(fileUpload({
   tempFileDir:path.join(__dirname,"tmp"),
   createParentPath:true,
   limits:{
-    fileSize: 10 * 1024 * 1024,
+    fileSize: 20 * 1024 * 1024,
   }
 }))
 
 app.use('/api/users',userRoutes)
-app.use('/api/auth',authRoutes)
 app.use('/api/admin',adminRoutes)
+app.use('/api/auth',authRoutes)
 app.use('/api/songs',songRoutes)
 app.use('/api/albums',albumRoutes)
 app.use('/api/stats',statRoutes)

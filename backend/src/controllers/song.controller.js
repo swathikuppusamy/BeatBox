@@ -13,7 +13,7 @@ export const getFeaturedSongs=async(req,res,next)=>{
 try {
     const songs = await Song.aggregate([  //aggregation pipeline to fetch random songs
         {
-            $sample:{size:6},
+            $sample:{size:9},
         },
         {
             $project:{
@@ -35,7 +35,7 @@ export const getMadeForYouSongs=async(req,res,next)=>{
     try {
         const songs = await Song.aggregate([  //aggregation pipeline to fetch random songs
             {
-                $sample:{size:4},
+                $sample:{size:8},
             },
             {
                 $project:{
@@ -58,7 +58,7 @@ export const getTrendingsSongs=async(req,res,next)=>{
     try {
         const songs = await Song.aggregate([  //aggregation pipeline to fetch random songs
             {
-                $sample:{size:6},
+                $sample:{size:10},
             },
             {
                 $project:{
