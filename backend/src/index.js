@@ -37,7 +37,7 @@ app.use(cors(
   }
 ))
 app.use(express.json());
-app.use(clerkMiddleware());
+// app.use(clerkMiddleware());
 
 app.use(fileUpload({
   useTempFiles:true,
