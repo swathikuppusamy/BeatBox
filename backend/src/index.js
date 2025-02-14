@@ -32,12 +32,12 @@ initializeSocket(httpServer)
 
 app.use(cors(
   {
-    origin:["https://mybeatbox.netlify.app","http://localhost:3000"],
+    origin:"*",
     credentials : true,
   }
 ))
 app.use(express.json());
-// app.use(clerkMiddleware());
+app.use(clerkMiddleware());
 
 app.use(fileUpload({
   useTempFiles:true,
