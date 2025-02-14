@@ -32,7 +32,7 @@ initializeSocket(httpServer)
 
 app.use(cors(
   {
-    origin:"*",
+    origin:["https://mybeatbox.netlify.app","http://localhost:3000"],
     credentials : true,
   }
 ))
