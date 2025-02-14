@@ -32,7 +32,7 @@ initializeSocket(httpServer)
 
 app.use(cors(
   {
-    origin:"https://mybeatbox.netlify.app/",
+    origin:"https://mybeatbox.netlify.app",
     credentials : true,
   }
 ))
@@ -67,6 +67,7 @@ cron.schedule("0 * * * *", () => {
 app.get("/", (req, res) => {
   res.send("Backend is running...");
 });
+
 app.use('/api/users',userRoutes)
 app.use('/api/admin',adminRoutes)
 app.use('/api/auth',authRoutes)
