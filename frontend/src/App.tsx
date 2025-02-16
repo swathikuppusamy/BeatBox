@@ -1,9 +1,10 @@
 // import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react"
 // import { Button } from "./components/ui/button"
 import { Route, Routes } from "react-router-dom"
-import HomePage from "./pages/home/HomePage"
+
 //import { axiosInstance } from "./lib/axios"
 import AuthCallBackPage from "./pages/authcallback/AuthCallBackPage"
+import HomePage from "./pages/home/HomePage"
 import { AuthenticateWithRedirectCallback } from "@clerk/clerk-react"
 import MainLayout from "./layout/MainLayout"
 import Chatpage from "./pages/chat/Chatpage"
