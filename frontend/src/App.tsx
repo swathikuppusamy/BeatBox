@@ -21,7 +21,7 @@ const App = () => {
     <>
       
     <Routes>
-     <Route path="/sso-callback" element={<AuthenticateWithRedirectCallback signInForceRedirectUrl={"/auth-callback"}  />}/>
+     <Route path="/sso-callback" element={<AuthenticateWithRedirectCallback signUpForceRedirectUrl={"/auth-callback"}  />}/>
      <Route path="/auth-callback" element={<AuthCallBackPage/>}/>
      <Route path="/admin" element={<AdminPage/>}/>
 
