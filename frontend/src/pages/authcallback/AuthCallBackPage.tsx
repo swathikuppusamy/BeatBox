@@ -26,7 +26,7 @@ const AuthCallbackPage = () => {
 			} catch (error) {
 				console.log("Error in auth callback", error);
 			} finally {
-				window.location.href = "https://mybeatbox.netlify.app/dashboard";
+				navigate("/");
 			}
 		};
 
