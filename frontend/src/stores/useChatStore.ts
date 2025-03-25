@@ -25,8 +25,12 @@ interface ChatStore {
 const baseURL ="https://beatbox-backend-ae6x.onrender.com/api";
 
 const socket = io(baseURL, {
-	autoConnect: false, // only connect if user is authenticated
-	withCredentials: true,
+    autoConnect: false, 
+    withCredentials: true,
+    transports: ['websocket'], // Force websocket transport
+    reconnection: true,
+    reconnectionAttempts: 5,
+    reconnectionDelay: 1000
 });
 
 export const useChatStore = create<ChatStore>((set, get) => ({
